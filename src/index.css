@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+  html,
+  body {
+    @apply m-0 w-full bg-bgColor
+  }
+}
+
+@layer components {
+  #root {
+    @apply w-full h-full
+  }
+
+  .App {
+    @apply w-full h-full flex justify-center items-center mt-32
+  }
+
+  .card {
+    @apply w-[350px] h-[600px] bg-cardBg flex flex-col justify-center items-center gap-5 rounded-2xl shadow-2xl shadow-shadow p-1
+  }
+  .card-img{
+    @apply bg-hover relative flex  justify-center items-center cursor-pointer rounded-3xl p-0
+  }
+  .card-img svg{
+    @apply absolute right-[132px] top-32
+  }
+  .card img {
+    @apply w-80 h-80  rounded-2xl font-bold   
+  }
+
+  .card-text {
+    @apply flex justify-start items-start flex-col p-5 gap-3 mt-[-1.5rem] ml-0 ml-[-0.7rem]
+  }
+
+  .card-text h1 {
+    @apply text-text m-1 text-[1.4rem] font-mono font-extrabold text-xl hover:text-coin cursor-pointer
+  }
+
+  .card-text p {
+    @apply text-info m-1 font-sans font-normal text-lg mt-0
+  }
+
+  .card-text .svg-bar {
+    @apply flex justify-between items-center gap-[5rem]
+  }
+
+  .card-text .svg-bar span {
+    @apply flex gap-2 m-1 justify-center items-center 
+  }
+
+  .eth {
+    @apply text-coin font-[600]  text-xl
+  }
+
+  .clock {
+    @apply text-info font-sans font-medium
+  }
+ 
+  .profile-card {
+    @apply flex justify-start items-start gap-3  text-left ml-[-3rem] m-1
+  }
+
+  .profile-card img {
+    @apply w-8 h-8 border-2 border-text rounded-full 
+  }
+  .profile-card h3{
+    @apply text-lg text-info  font-normal font-sans
+  }
+  .profile-card h3 span{
+    @apply text-text m-3  hover:text-coin cursor-pointer
+  }
+}
